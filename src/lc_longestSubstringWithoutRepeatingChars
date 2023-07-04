@@ -46,38 +46,37 @@ public class Solution {
         
         return longestSubstring;
     }
-}
 
-// ---------- OTHER SOLUTION ----------
-public int LengthOfLongestSubstring(string s) {
-    Dictionary<char,int> set = new Dictionary<char,int>();
-    int maxSub = 0;
-    
-    for (int i = 0; i < s.Length; i++)
-    {
-        char c = s[i]; //the char
 
-        if (!set.ContainsKey(c))
+    // ---------- OTHER SOLUTION ----------
+    public int LengthOfLongestSubstring_2(string s) {
+        Dictionary<char,int> set = new Dictionary<char,int>();
+        int maxSub = 0;
+        
+        for (int i = 0; i < s.Length; i++)
         {
-            set.Add(c, i); // add the char and index if it doesnt exist in the set 
-            maxSub = Math.Max(set.Count, maxSub); //maxSub value is either the count of the set or the maxSub
+            char c = s[i]; //the char
+
+            if (!set.ContainsKey(c))
+            {
+                set.Add(c, i); // add the char and index if it doesnt exist in the set 
+                maxSub = Math.Max(set.Count, maxSub); //maxSub value is either the count of the set or the maxSub
+            }
+            else
+            {
+                i = set[c]; //go to the index of this char, wouldnt it be the first occurence of this char?
+                set.Clear();
+            }
         }
-        else
-        {
-            i = set[c]; //go to the index of this char, wouldnt it be the first occurence of this char?
-            set.Clear();
-        }
+
+        return maxSub;      
     }
 
-    return maxSub;      
-}
+    // #2
+    // Time Complexity: O(n)
+    // Space Complexity: O(min(n, m))
 
-// #2
-// Time Complexity: O(n)
-// Space Complexity: O(min(n, m))
-
-public class Solution {
-    public int LengthOfLongestSubstring(string s) {
+    public int LengthOfLongestSubstring_3(string s) {
         var charSet = new HashSet<char>();
         int left = 0, right = 0, maxLength = 0;
 
