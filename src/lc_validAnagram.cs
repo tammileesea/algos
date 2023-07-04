@@ -95,6 +95,6 @@ public class AnagramSolution {
             return false;
         }
 
-        return false;
+        // return false;
     }
 }
