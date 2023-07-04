@@ -1,10 +1,9 @@
 // LeetCode: LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS
 
-// ---------- MY SOLUTION ----------
-// Runtime: 120ms
-// Memory: 39.5MB
-
-public class Solution {
+public class LengthOfLongestSubstringSolution {
+    // ---------- MY SOLUTION ----------
+    // Runtime: 120ms
+    // Memory: 39.5MB
     public int LengthOfLongestSubstring(string s) {
         if (s.Length == 0) return 0;
         if (s.Length == 1) return 1;
