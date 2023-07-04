@@ -23,7 +23,7 @@
 // true if inputString is a palindrome, false otherwise.
 
 // ----------- SOLUTION ----------
-public class Solution {
+public class PalindromeSolution {
     public bool IsPalindrome(string inputString) {
     var count = inputString.Length;
     var arr = inputString.ToCharArray();
