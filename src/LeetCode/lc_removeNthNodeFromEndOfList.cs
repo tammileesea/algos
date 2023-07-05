@@ -3,6 +3,15 @@
 // Given the head of a linked list, 
 // remove the nth node from the end of the list and return its head.
 
+// Input: head = [1,2,3,4,5], n = 2
+// Output: [1,2,3,5]
+
+// Input: head = [1], n = 1
+// Output: []
+
+// Input: head = [1,2], n = 1
+// Output: [1]
+
 
 //  Definition for singly-linked list.
 public class ListNode {
@@ -15,6 +24,7 @@ public class ListNode {
 }
 
 public class RemoveNthNodeSolution {
+    // MY SOLUTION
     public ListNode RemoveNthFromEnd(ListNode head, int n) {
         int nodeCount = 0;
         ListNode current = head;
@@ -56,6 +66,31 @@ public class RemoveNthNodeSolution {
             }
         }
 
+        return head;
+    }
+
+
+    // OTHER SOLUTION
+    public ListNode removeNthFromEnd(ListNode head, int n) 
+    {
+        ListNode fast = head;
+        ListNode slow = head;
+
+        for (int i = 0; i < n; i++) 
+        {
+            fast = fast.next;
+        }
+
+        //so if there are only 2 nodes, it'll just return the 2nd one
+        if (fast == null) return head.next;
+
+        //by this point, fast is always n # of nodes ahead of slow
+        while (fast.next != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+        slow.next = slow.next.next;
         return head;
     }
 }
