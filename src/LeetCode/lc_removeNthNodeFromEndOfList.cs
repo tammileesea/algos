@@ -25,21 +25,29 @@ public class ListNode {
 
 public class RemoveNthNodeSolution {
     // MY SOLUTION
+    // Runtime: 82ms
+    // Memory: 39MB
     public ListNode RemoveNthFromEnd(ListNode head, int n) {
+        //if there is only 1 node, return null
+        if (head.next == null)
+        {
+            return null;
+        }
+
         int nodeCount = 0;
         ListNode current = head;
 
-        while (current.next != null)
+        while (current != null)
         {
             nodeCount++;
             current = current.next;
         }
 
-        nodeCount++;
-
-        if (nodeCount < 2)
+        //if the number of nodes and n are the same, that means the first node must be removed
+        if (nodeCount == n)
         {
-            return null;
+            head = head.next;
+            return head;
         }
 
         int target = nodeCount - n;
@@ -47,14 +55,9 @@ public class RemoveNthNodeSolution {
 
         current = head;
 
-        while (current.next != null)
+        while (targetCount < target)
         {
-            if (target == 0)
-            {
-                current = current.next;
-                return current;
-            }
-            else if (targetCount == target - 1)
+            if (targetCount == target - 1)
             {
                 current.next = current.next.next;
                 break;
