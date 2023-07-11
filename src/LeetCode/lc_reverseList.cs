@@ -2,7 +2,7 @@
 
 public class ReverseListSolution {
     //ITERATIVE SOLUTION
-    public ListNode ReverseList(ListNode head) {
+    public ListNode ReverseListIteratively(ListNode head) {
         ListNode prev = null;
         ListNode current = head;
         ListNode next = null;
@@ -18,6 +18,37 @@ public class ReverseListSolution {
         return prev;
     }
 
-    //RECURSIVE SOLUTION
+    //RECURSIVE SOLUTIONS
+    public ListNode ReverseListRecursively_1(ListNode head) 
+    {
+        if (head == null || head.next == null)
+        {
+            return head;
+        }
+
+        ListNode reversed = ReverseListRecursively_1(head.next); 
+        head.next.next = head; //
+        head.next = null;
+
+        return reversed;
+    }
+
+    // [1, 2, 3, 4, 5]
     
+
+    public ListNode ReverseListRecursively_2(ListNode head, ListNode prev) 
+    {
+        if (head == null)
+        {
+            return prev;
+        }
+
+        ListNode next = head.next;
+        head.next = prev;
+
+        return ReverseListRecursively_2(next, head);
+    }
 }
+
+// NOTES
+// the 2nd recursive one is like a direct translation of the iterative approach
