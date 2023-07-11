@@ -74,10 +74,13 @@ public class RemoveNthNodeSolution {
 
 
     // OTHER SOLUTION
-    public ListNode removeNthFromEnd(ListNode head, int n) 
+    public ListNode RemoveNthFromEnd_2(ListNode head, int n) 
     {
         ListNode fast = head;
         ListNode slow = head;
+
+        // [1, 2, 3, 4, 5, 6]
+        // n = 3
 
         for (int i = 0; i < n; i++) 
         {
@@ -87,13 +90,39 @@ public class RemoveNthNodeSolution {
         //so if there are only 2 nodes, it'll just return the 2nd one
         if (fast == null) return head.next;
 
-        //by this point, fast is always n # of nodes ahead of slow
+        //by this point, fast is always n-1 # of nodes ahead of slow
         while (fast.next != null) {
             fast = fast.next;
             slow = slow.next;
         }
 
         slow.next = slow.next.next;
+        return head;
+    }
+
+    public ListNode RemoveNthFromEnd_3(ListNode head, int n)
+    {
+        ListNode prev = null;
+
+        for (var (node, i) = (head, 0); node != null; node = node.next, i++)
+        {
+            if (i >= n)
+            {
+                if (prev == null) 
+                {
+                    prev = head;
+                }
+                else 
+                {
+                    prev = prev.next; 
+                }
+            }
+        }   
+        
+        if (prev == null) return head.next;
+
+        if (prev.next != null) prev.next = prev.next.next;
+
         return head;
     }
 }
