@@ -33,8 +33,6 @@ public class ReverseListSolution {
         return reversed;
     }
 
-    // [1, 2, 3, 4, 5]
-    
 
     public ListNode ReverseListRecursively_2(ListNode head, ListNode prev) 
     {
@@ -52,3 +50,6 @@ public class ReverseListSolution {
 
 // NOTES
 // the 2nd recursive one is like a direct translation of the iterative approach
+// I think i FINALLY realized what I'd been missing in terms of my failure of TRUE recursion understanding
+// for whatever reason, I failed to truly understand how stacks work in recursion. NOW I GET IT 
+// tg for youtube!!!
