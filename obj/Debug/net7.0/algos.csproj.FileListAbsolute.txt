@@ -1,0 +1,15 @@
+/Users/tammilee/Projects/algos/algos/bin/Debug/net7.0/algos
+/Users/tammilee/Projects/algos/algos/bin/Debug/net7.0/algos.deps.json
+/Users/tammilee/Projects/algos/algos/bin/Debug/net7.0/algos.runtimeconfig.json
+/Users/tammilee/Projects/algos/algos/bin/Debug/net7.0/algos.dll
+/Users/tammilee/Projects/algos/algos/bin/Debug/net7.0/algos.pdb
+/Users/tammilee/Projects/algos/algos/obj/Debug/net7.0/algos.csproj.AssemblyReference.cache
+/Users/tammilee/Projects/algos/algos/obj/Debug/net7.0/algos.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tammilee/Projects/algos/algos/obj/Debug/net7.0/algos.AssemblyInfoInputs.cache
+/Users/tammilee/Projects/algos/algos/obj/Debug/net7.0/algos.AssemblyInfo.cs
+/Users/tammilee/Projects/algos/algos/obj/Debug/net7.0/algos.csproj.CoreCompileInputs.cache
+/Users/tammilee/Projects/algos/algos/obj/Debug/net7.0/algos.dll
+/Users/tammilee/Projects/algos/algos/obj/Debug/net7.0/refint/algos.dll
+/Users/tammilee/Projects/algos/algos/obj/Debug/net7.0/algos.pdb
+/Users/tammilee/Projects/algos/algos/obj/Debug/net7.0/algos.genruntimeconfig.cache
+/Users/tammilee/Projects/algos/algos/obj/Debug/net7.0/ref/algos.dll
