@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-// var x = new MiscOne();
+// var x = new MiscA();
 // var one = new int[]{1, 1, 2, 3}; //0
 // var resultOne = x.ArrayPairs(one);
 // Console.WriteLine("1: {0}", resultOne);
@@ -22,4 +22,18 @@ var y = new int[]{1};
 // var y = new int[]{1, 2, 3, 4, 5, 6, 1};
 var result = x.ContainsDuplicateSolution(y);
 
-Console.WriteLine("result: {0}", result);
+
+//2 pointer cyclical linked list
+// Node head = new Node(1);
+//     Node two = new Node(2);
+//     head.next = two;
+//     Node three = new Node(3);
+//     two.next = three;
+//     Node four = new Node(4);
+//     three.next = four;
+//     Node five = new Node(5);
+//     four.next = five;
+//     // five.next = three;
+
+//     var x = CyclicalLinkedList(head);
+//     Console.WriteLine(x);
