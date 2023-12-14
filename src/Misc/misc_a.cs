@@ -5,7 +5,7 @@
 //{1, 1, 2, 2, 3}
 //{8, 1, 2, 3, 4, 5, 8, 6, 7, 8, 8, 8, 8}
 
-public class MiscOne
+public class MiscA
 {
     public int ArrayPairs(int[] array)
     {

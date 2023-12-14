@@ -1,6 +1,10 @@
-public class MiscTwo
+public class SlidingWindowLongestSubarray
 {
-    // Create a function that, given an array of non-negative integers and an integer n, find the longest contiguous subarray that sums to exactly n. Give me the length of longest subarray as return value.
+    //SLIDING WINDOW
+    //Mock interview w Casey
+    //Create a function that, given an array of non-negative integers and an integer n, 
+    //find the longest contiguous subarray that sums to exactly n. 
+    //Give me the length of longest subarray as return value.
 
     // n = 8
     // [1, 3, 5, 8]
