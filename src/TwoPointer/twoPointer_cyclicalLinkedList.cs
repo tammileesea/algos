@@ -1,5 +1,7 @@
 public class TwoPointerCyclicalLinkedList
 {
+    //Mock w Casey
+
     public class Node 
     {
         internal int data;
